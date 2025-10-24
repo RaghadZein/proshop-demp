@@ -7,7 +7,10 @@ import Product from "./models/productModel.js";
 import User from "./models/userModel.js";
 import Order from "./models/orderModel.js";
 import connectDB from "./config/db.js";
+
 dotenv.config();
+
+console.log("Loaded MONGO_URI:", process.env.MONGO_URI); // debug check
 
 connectDB();
 const importData = async () => {
