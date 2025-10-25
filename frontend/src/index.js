@@ -1,11 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom/client"; // Responsible for rendering your React app into the actual HTML page.
 import {
   createBrowserRouter,
   RouterProvider,
   Route,
   createRoutesFromElements,
-} from "react-router-dom";
+} from "react-router-dom"; // Manages routing in your React application.
 import "./assets/styles/index.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/styles/index.css";

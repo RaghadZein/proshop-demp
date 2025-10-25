@@ -8,8 +8,10 @@ const App = () => {
     <>
       <Header />
       <main className="py-3">
+        {" "}
+        {/* Main content area with vertical padding */}
         <Container>
-          <Outlet />
+          <Outlet /> {/* Renders the matched child route component here */}
         </Container>
       </main>
       <Footer />
