@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client"; // Responsible for rendering your React app into the actual HTML page.
+import ReactDOM from "react-dom/client";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -10,7 +10,6 @@ import { Provider } from "react-redux";
 import store from "./store.js";
 import "./assets/styles/index.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
-import "./assets/styles/index.css";
 import "./assets/styles/bootstrap.custom.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
