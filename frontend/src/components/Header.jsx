@@ -26,7 +26,10 @@ const Header = () => {
                   {/* Show badge only if there are items in the cart */}
                   {cartItems.length > 0 && (
                     <Badge pill bg="success" className="ms-1">
-                      {cartItems.reduce((acc, item) => acc + item.qty, 0)}
+                      {cartItems.reduce(
+                        (acc, item) => acc + Number(item.qty || 0),
+                        0
+                      )}
                     </Badge>
                   )}
                 </Nav.Link>
