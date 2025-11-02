@@ -13,13 +13,13 @@ const userSchema = new mongoose.Schema(
 userSchema.methods.matchPassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };
+//run before so we are gonna hash the pass before its saved
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) {
     next();
-  } else {
-    this.password = await hashPassword(this.password);
-    next();
   }
+  const salt = await bcrypt.genSalt(10);
+  this.password = await bcrypt.hash(this.password, salt);
 });
 const User = mongoose.model("User", userSchema);
 export default User;
